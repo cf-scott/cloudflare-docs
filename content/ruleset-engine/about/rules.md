@@ -22,4 +22,4 @@ For example:
 
 - If a [Rewrite URL Rule](/rules/transform/url-rewrite/) #1 updates the URI path or the query string of a request, Rewrite URL Rule #2 will not take these earlier changes into consideration.
 - If a [HTTP Request Header Modification Rule](/rules/transform/request-header-modification/) #1 sets the value of a request header, HTTP Request Header Modification Rule #2 will not be able to read or evaluate this new value.
-- If a Rewrite URL Rule updates the URI path or query string of a request, the `http.request.uri`, `http.request.uri.*`, and `http.request.full_uri` fields will have a different value in phases after the `http_request_transform` phase (where Rewrite URL Rules are executed).
+- If a Rewrite URL Rule updates the URI path or query string of a request, the `http.request.uri`, `http.request.uri.*`, and `http.request.full_uri` fields will have a different value in phases after the `http_request_transform` phase (where Rewrite URL Rules are executed). Use the `raw` version of the field instead, such as `raw.http.request.uri`, `raw.http.request.full_uri`, etc., to match the URL sent by the user.
