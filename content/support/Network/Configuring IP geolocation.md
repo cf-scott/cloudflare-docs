@@ -25,7 +25,7 @@ ___
 
 The recommended procedure to enable IP geolocation information is to [enable the **Add visitor location headers** Managed Transform](/rules/transform/managed-transforms/reference/). This Managed Transform adds HTTP request headers with location information for the visitor's IP address, such as city, country, continent, longitude, and latitude.
 
-Besides using the Managed Transform, you can also enable the **IP Geolocation** feature in the [Cloudflare dashboard](https://dash.cloudflare.com/) (**Network** app), which will only add a request header for the visitor's country.
+Besides using the Managed Transform, you can also enable the **IP Geolocation** feature in the [Cloudflare dashboard](https://dash.cloudflare.com/) (**Network** app), which will only add a request header for the visitor's country.  This setting takes precedence over the Managed Transforms Rule for Remove Visitor IP Headers, and will retain the IP Address header.
 
 ___
 
